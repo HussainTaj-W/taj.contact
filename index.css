@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome {
+    padding: 16px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #bdbdbd;
+    margin: 16px;
+    border-radius: 8px;
+}
+
+.item a {
+    text-decoration: none !important;
+}
+
+.card .title, .card .name {
+    all: unset;
+    color: #000;
+    font-weight: 400;
+
+}
+
+.card .name {
+    font-size: 2rem;
+    margin-left: 8px;
+}
+
+.card .title {
+    color: gray;
+}
+
+.card .title {
+    margin: 8px;
+}
