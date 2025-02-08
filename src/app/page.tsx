@@ -1,6 +1,4 @@
 
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { FloatingDock } from "@/components/ui/floating-dock";
 import { GlareCard } from "@/components/ui/glare-card";
 import { IconBook, IconBrandGithub, IconBrandLinkedin, IconBrandX, IconExchange, IconHome, IconMail, IconNewSection, IconTerminal, IconTerminal2, IconUser } from "@tabler/icons-react";
 import React from "react";
@@ -13,18 +11,21 @@ export default function Home()
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {links.map((link, index) => (
                     <a href={link.href} key={index}>
-                        <GlareCard className="flex flex-col items-center justify-end p-6" >
+                        <GlareCard className="flex md:flex-col md:items-center md:justify-end p-6">
                             {link.image && (
                                 <img
                                     className="h-full w-full absolute inset-0 object-cover"
                                     src={link.image}
                                 />
                             )}
-                            <div className="absolute inset-0 bg-black opacity-50 z-0">
+                            <div className="absolute inset-0 z-0 invisible md:visible bg-gradient-to-t from-black/70 to-black/25"></div>
+                            <div className="absolute inset-0 z-0 md:invisible bg-gradient-to-r from-black/95 via-black/75 to-black/25"></div>
 
+
+                            <div className="z-10">
+                                <p className="font-bold text-white text-2xl">{link.name}</p>
+                                <p className="font-normal text-base text-neutral-200">{link.title}</p>
                             </div>
-                            <p className="font-bold text-white text-2xl z-10">{link.name}</p>
-                            <p className="font-normal text-base text-neutral-200  z-10">{link.title}</p>
 
                         </GlareCard>
                     </a>
