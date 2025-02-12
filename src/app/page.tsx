@@ -22,7 +22,7 @@ export default function Home()
                             <div className="absolute inset-0 z-0 md:invisible bg-gradient-to-r from-black/95 via-black/75 to-black/25"></div>
 
 
-                            <div className="z-10">
+                            <div className="z-10 md:text-center">
                                 <p className="font-bold text-white text-2xl">{link.name}</p>
                                 <p className="font-normal text-base text-neutral-200">{link.title}</p>
                             </div>
