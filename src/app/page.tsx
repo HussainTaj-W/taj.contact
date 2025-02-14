@@ -11,18 +11,18 @@ export default function Home()
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {links.map((link, index) => (
                     <a href={link.href} key={index}>
-                        <GlareCard className="flex md:flex-col md:items-center md:justify-end p-6">
+                        <GlareCard className="flex md:flex-col md:items-center md:justify-end p-6 h-[20vh] md:h-[100%]">
                             {link.image && (
                                 <img
-                                    className="h-full w-full absolute inset-0 object-cover"
+                                    className=" max-h-[100vh] max-w-[50vw] absolute right-0 top-0 bottom-0 object-contain md:absolute md:inset-0 md:h-full md:w-full md:object-cover"
                                     src={link.image}
                                 />
                             )}
                             <div className="absolute inset-0 z-0 invisible md:visible bg-gradient-to-t from-black/70 to-black/25"></div>
-                            <div className="absolute inset-0 z-0 md:invisible bg-gradient-to-r from-black/95 via-black/75 to-black/25"></div>
+                            <div className="absolute inset-0 z-0 md:invisible bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,0.7)_60%,rgba(0,0,0,0.25)_100%)]"></div>
 
 
-                            <div className="z-10 md:text-center">
+                            <div className="z-10 my-auto md:my-0 md:text-center">
                                 <p className="font-bold text-white text-2xl">{link.name}</p>
                                 <p className="font-normal text-base text-neutral-200">{link.title}</p>
                             </div>
