@@ -19,7 +19,7 @@ export default function Home()
                                 />
                             )}
                             <div className="absolute inset-0 z-0 invisible md:visible bg-gradient-to-t from-black/70 to-black/25"></div>
-                            <div className="absolute inset-0 z-0 md:invisible bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,0.7)_60%,rgba(0,0,0,0.25)_100%)]"></div>
+                            <div className="absolute inset-0 z-0 md:invisible bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_50%,rgba(0,0,0,0.5)_80%,rgba(0,0,0,0.25)_100%)]"></div>
 
 
                             <div className="z-10 my-auto md:my-0 md:text-center">
