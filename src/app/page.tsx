@@ -3,8 +3,7 @@ import { GlareCard } from "@/components/ui/glare-card";
 import { IconBook, IconBrandGithub, IconBrandLinkedin, IconBrandX, IconExchange, IconHome, IconMail, IconNewSection, IconTerminal, IconTerminal2, IconUser } from "@tabler/icons-react";
 import React from "react";
 
-export default function Home()
-{
+export default function Home() {
     return (
         <div className="h-[100vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
 
@@ -24,7 +23,18 @@ export default function Home()
 
                             <div className="z-10 my-auto md:my-0 md:text-center">
                                 <p className="font-bold text-white text-2xl">{link.name}</p>
-                                <p className="font-normal text-base text-neutral-200">{link.title}</p>
+                                {link.title &&
+                                    <p className="font-normal text-base text-neutral-200">{link.title}</p>
+                                }
+
+                                {(link.titles && !link.title) &&
+                                    (
+                                        link.titles.map((titleText, tIndex) => (
+                                            <p className="font-normal text-base text-neutral-200">{titleText}</p>
+                                        ))
+                                    )
+                                }
+
                             </div>
 
                         </GlareCard>
@@ -38,7 +48,8 @@ export default function Home()
 
 type ProfileLink = {
     name: string;
-    title: string;
+    title?: string;
+    titles?: string[];
     image?: string;
     href: string;
 }
@@ -46,21 +57,40 @@ type ProfileLink = {
 const links: ProfileLink[] = [
     {
         name: "Hassan Taj",
-        title: "Senior Software Engineer",
+        titles: [
+            "Senior Software Engineer | Mentor",
+            "Microsoft Certified Azure Developer",
+        ],
         image: "/images/hassan.webp",
         href: "https://hassan.taj.contact/",
     },
     {
         name: "Hussain Taj",
-        title: "Software Engineer",
+        titles: [
+            "Software Engineer",
+            "Mobile App Developer"
+        ],
         image: "/images/hussain.jpg",
         href: "https://hussain.taj.contact/",
     },
     {
         name: "Husnain Taj",
-        title: "Student / Freelancer",
+        titles: [
+            "Student | Freelancer",
+            "Associate Software Engineer"
+        ],
         image: "/images/husnain.jpg",
         // image: "https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         href: "https://husnain.taj.contact/",
+    },
+    {
+        name: "Ahmad Taj",
+        titles: [
+            "Student",
+            "Associate Software Engineer"
+        ],
+        image: "/images/ahmad.jpg",
+        // image: "https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        href: "https://ahmad.taj.contact/",
     },
 ];
