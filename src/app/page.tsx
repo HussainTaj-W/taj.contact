@@ -59,7 +59,7 @@ const links: ProfileLink[] = [
         name: "Hassan Taj",
         titles: [
             "Senior Software Engineer | Mentor",
-            "Microsoft Certified Azure Developer",
+            "Microsoft Certified Azure Solutions Architect Expert",
         ],
         image: "/images/hassan.webp",
         href: "https://hassan.taj.contact/",
